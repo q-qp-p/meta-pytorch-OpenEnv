@@ -1,8 +1,12 @@
 - sections:
+  - local: index
+    title: Overview
   - local: getting-started
     title: Getting Started
   title: Get Started
 - sections:
+  - local: guides/index
+    title: Overview
   - local: guides/concepts
     title: Concepts
   - local: guides/auto-discovery
@@ -29,6 +33,8 @@
     title: Customizing the Web UI
   title: Guides
 - sections:
+  - local: tutorials/index
+    title: Overview
   - local: tutorials/openenv-tutorial
     title: OpenEnv Tutorial
   - local: tutorials/end-to-end-walkthrough
@@ -47,6 +53,10 @@
     title: BrowserGym Harness
   - local: tutorials/sft-warmup
     title: SFT Warm-up
+  - local: getting_started/environment-builder
+    title: Packaging & Deploying
+  - local: getting_started/contributing-envs
+    title: Contributing Environments
   title: Tutorials
 - sections:
   - local: environments
@@ -121,6 +131,8 @@
     title: Opencode
   title: Environments
 - sections:
+  - local: reference/index
+    title: Overview
   - local: reference/core
     title: Core API
   - local: reference/cli
