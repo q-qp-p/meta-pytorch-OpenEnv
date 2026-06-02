@@ -224,8 +224,6 @@ For a high-level explanation of how MCP-backed environments move through `step()
 
 [[autodoc]] openenv.core.tools.git_server_client.GitServerClient
 
-[[autodoc]] openenv.core.tools.local_python_executor.PyExecutor
-
 ## Container providers
 
 [[autodoc]] openenv.core.containers.runtime.providers.ContainerProvider
