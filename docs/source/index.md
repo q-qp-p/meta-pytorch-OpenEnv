@@ -57,7 +57,6 @@ We welcome contributions from the community! OpenEnv is openly governed by a tec
 
 If you find a bug, have a feature request, or want to contribute a new environment, please open an issue or submit a pull request. The repository is hosted on GitHub at [huggingface/OpenEnv](https://github.com/huggingface/OpenEnv).
 
-```{warning}
-OpenEnv is currently in an experimental stage. You should expect bugs, incomplete features, and APIs that may change in future versions. The project welcomes bug fixes, but significant changes should be discussed before implementation so the technical committee and community can coordinate scope, compatibility, and release timing. Signal your intention to contribute in the issue tracker by filing a new issue or claiming an existing one.
-```
+> [!WARNING]
+> OpenEnv is currently in an experimental stage. You should expect bugs, incomplete features, and APIs that may change in future versions. The project welcomes bug fixes, but significant changes should be discussed before implementation so the technical committee and community can coordinate scope, compatibility, and release timing. Signal your intention to contribute in the issue tracker by filing a new issue or claiming an existing one.
 

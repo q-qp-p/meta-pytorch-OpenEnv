@@ -3,9 +3,8 @@
 This tutorial covers training a language model to play the 2048 game using
 reinforcement learning with GRPO (Group Relative Policy Optimization).
 
-```{note}
-**Time**: ~45 minutes | **Difficulty**: Advanced | **GPU Required**: Yes (T4 or better)
-```
+> [!NOTE]
+> **Time**: ~45 minutes | **Difficulty**: Advanced | **GPU Required**: Yes (T4 or better)
 
 ## What You'll Learn
 

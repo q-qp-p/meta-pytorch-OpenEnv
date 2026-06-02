@@ -1,8 +1,7 @@
 # Environments
 
-```{note}
-The environments listed here may not reflect the latest additions. For the official OpenEnv collection, see the [OpenEnv organization on Hugging Face](https://huggingface.co/openenv). You may also find additional community environments tagged `agent-environment` on [Hugging Face Spaces](https://huggingface.co/spaces?category=agent-environment). The environments highlighted below are a curated selection.
-```
+> [!NOTE]
+> The environments listed here may not reflect the latest additions. For the official OpenEnv collection, see the [OpenEnv organization on Hugging Face](https://huggingface.co/openenv). You may also find additional community environments tagged `agent-environment` on [Hugging Face Spaces](https://huggingface.co/spaces?category=agent-environment). The environments highlighted below are a curated selection.
 
 The OpenEnv community has built a catalog of ready-to-run environments that cover deterministic smoke tests, full developer workflows, and multi-step reasoning challenges. Explore the surface area below and jump directly into the guides for each environment.
 
@@ -262,9 +261,8 @@ The OpenEnv community has built a catalog of ready-to-run environments that cove
   </div>
 </div>
 
-```{tip}
-Want to publish your own environment? Head over to the [Build Your Own Environment](getting_started/environment-builder.md) guide for a step-by-step walkthrough.
-```
+> [!TIP]
+> Want to publish your own environment? Head over to the [Build Your Own Environment](getting_started/environment-builder.md) guide for a step-by-step walkthrough.
 
 ## Community Environments
 

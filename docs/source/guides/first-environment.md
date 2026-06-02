@@ -1,8 +1,7 @@
 # Your First Environment
 
-:::{note}
-This page is a condensed preview. For the end-to-end walk-through — including Docker packaging, `openenv.yaml`, and Hugging Face Space deployment — see the [full environment builder guide](../getting_started/environment-builder.md).
-:::
+> [!NOTE]
+> This page is a condensed preview. For the end-to-end walk-through — including Docker packaging, `openenv.yaml`, and Hugging Face Space deployment — see the [full environment builder guide](../getting_started/environment-builder.md).
 
 ## Overview
 

@@ -300,10 +300,9 @@ trainer.train()
 trainer.push_to_hub(commit_message="SFT warm-up on reasoning_gym chain_sum")
 ```
 
-```{note}
-Training ~270 examples for 3 epochs takes around 5 minutes on a single A100 (40 GB). The goal is format
-compliance, not task mastery — a handful of epochs is enough. Mastery comes from GRPO.
-```
+> [!NOTE]
+> Training ~270 examples for 3 epochs takes around 5 minutes on a single A100 (40 GB). The goal is format
+> compliance, not task mastery — a handful of epochs is enough. Mastery comes from GRPO.
 
 ---
 

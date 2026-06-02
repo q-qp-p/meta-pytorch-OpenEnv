@@ -23,9 +23,8 @@ We pair **GRPO** with a **procedural** task on purpose. GRPO is a value-free RL 
 - **Dataset**: `chain_sum` from Reasoning Gym — chains of integer additions like `Compute 17 + 4 + 22 + 9`. Procedurally generated, so every rollout sees a fresh problem.
 - **Trainer**: [TRL `GRPOTrainer`](https://huggingface.co/docs/trl/main/en/grpo_trainer) with `environment_factory`.
 
-```{note}
-This tutorial runs through training; on a single A100 (40 GB) the recipe completes in roughly an hour at the suggested settings, peaking around ~38 GB of VRAM. T4 (16 GB) won't fit Qwen3-1.7B at these settings — see the model bullet above for the smaller-GPU swap. The exact reward numbers you see will vary with seed and budget — the point is to watch the reward curve climb and report the delta.
-```
+> [!NOTE]
+> This tutorial runs through training; on a single A100 (40 GB) the recipe completes in roughly an hour at the suggested settings, peaking around ~38 GB of VRAM. T4 (16 GB) won't fit Qwen3-1.7B at these settings — see the model bullet above for the smaller-GPU swap. The exact reward numbers you see will vary with seed and budget — the point is to watch the reward curve climb and report the delta.
 
 ---
 
@@ -156,9 +155,8 @@ class ReasoningGymTrainEnv:
         return f"score={self.reward} correct={result.observation.correct_answer}"
 ```
 
-```{note}
-Replace the `base_url` with your own deployment if you've pushed `reasoning_gym_env` to your own Space — the hosted versions have limited concurrency and are intended for tutorials and small experiments.
-```
+> [!NOTE]
+> Replace the `base_url` with your own deployment if you've pushed `reasoning_gym_env` to your own Space — the hosted versions have limited concurrency and are intended for tutorials and small experiments.
 
 ### What the trainer does with this class
 
@@ -234,9 +232,8 @@ grpo_config = GRPOConfig(
 
 A few of the choices above worth flagging: `max_steps=150` caps the run before saturation (see *Reading the dashboard* below). `gradient_accumulation_steps=4` keeps the parallel env count at `1 × 4 = 4`, well under the server's default concurrency limit. `save_strategy="no"` skips intermediate checkpoints so the run stays quiet — we push the final model explicitly in section 9. `use_vllm` is left at its default (`False`); enabling it speeds up rollouts on bare-metal but its distributed init breaks under IPython.
 
-```{note}
-`chat_template_kwargs={"enable_thinking": False}` disables Qwen3's thinking mode so the model emits tool calls directly instead of reasoning tokens first. For a pure tool-use task like this one that's what you want; for harder math you may benefit from re-enabling it and growing `max_completion_length`.
-```
+> [!NOTE]
+> `chat_template_kwargs={"enable_thinking": False}` disables Qwen3's thinking mode so the model emits tool calls directly instead of reasoning tokens first. For a pure tool-use task like this one that's what you want; for harder math you may benefit from re-enabling it and growing `max_completion_length`.
 
 ---
 
@@ -311,9 +308,8 @@ A delta of **+10 to +30 pp** is what you should expect at this difficulty; outsi
 - **Δ ≈ 0 pp, initial very low (≤20%)** — task is too hard for the base model to ever stumble onto a correct answer, so GRPO has no positive rollouts to learn from. Lower `min_terms` / `min_digits`. If the reward stays near zero even at minimum difficulty, the bottleneck is likely **format compliance** rather than task difficulty — the model never produces a valid `<tool_call>` so the env cannot score it. See the [SFT warm-up tutorial](https://huggingface.github.io/OpenEnv/tutorials/sft-warmup.html) for how to fix this before returning to GRPO.
 - **Δ negative** — you trained past saturation: once `reward` plateaus, the KL penalty starts pulling the policy back toward the reference. Reduce `max_steps` so training stops while it's still net-improving.
 
-```{note}
-This delta is measured *during training* — same prompt format, same env, same procedural distribution that produced each rollout. It's the most direct way to ask "did the policy improve over the run?". A more rigorous protocol — generating completions on a held-out split with a separate evaluation harness — is what frameworks like [Inspect AI](https://inspect.aisi.org.uk/) are designed for; that's a follow-up rather than part of this walkthrough.
-```
+> [!NOTE]
+> This delta is measured *during training* — same prompt format, same env, same procedural distribution that produced each rollout. It's the most direct way to ask "did the policy improve over the run?". A more rigorous protocol — generating completions on a held-out split with a separate evaluation harness — is what frameworks like [Inspect AI](https://inspect.aisi.org.uk/) are designed for; that's a follow-up rather than part of this walkthrough.
 
 ---
 

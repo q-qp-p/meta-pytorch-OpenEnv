@@ -31,6 +31,8 @@
     title: Rewards
   - local: guides/customizing-web-ui
     title: Customizing the Web UI
+  - local: getting_started/environment-builder
+    title: Packaging & Deploying
   title: Guides
 - sections:
   - local: tutorials/index
@@ -53,10 +55,6 @@
     title: BrowserGym Harness
   - local: tutorials/sft-warmup
     title: SFT Warm-up
-  - local: getting_started/environment-builder
-    title: Packaging & Deploying
-  - local: getting_started/contributing-envs
-    title: Contributing Environments
   title: Tutorials
 - sections:
   - local: environments
@@ -143,6 +141,8 @@
 - sections:
   - local: contributing
     title: Contributing
+  - local: getting_started/contributing-envs
+    title: Contributing Environments
   - local: release-notes
     title: Release Notes
   title: Project
