@@ -49,9 +49,6 @@ cli = [
     "tomli>=2.3.0",
     "tomli-w>=1.2.0",
 ]
-docs = [
-    "doc-builder[quality]",
-]
 all = [
     "openenv[core]",
     "openenv[cli]",
