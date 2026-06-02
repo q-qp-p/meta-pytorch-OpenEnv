@@ -7,7 +7,7 @@ This guide walks you through creating a custom environment using the `OpenEnv` f
 The CLI handles scaffolding, builds, validation, and deployment so you can stay focused on environment logic.
 
 > [!NOTE]
-> **New to OpenEnv?** If you're just getting started, we recommend completing the [Getting Started tutorials](index) first. They provide a conceptual introduction to OpenEnv and reinforcement learning fundamentals. This guide is for developers ready to build production-quality environments.
+> **New to OpenEnv?** If you're just getting started, we recommend completing the [Getting Started tutorials](../tutorials/index) first. They provide a conceptual introduction to OpenEnv and reinforcement learning fundamentals. This guide is for developers ready to build production-quality environments.
 
 ## Quick Reference Card
 
@@ -38,7 +38,7 @@ Already familiar with OpenEnv? Here's the 8-step process at a glance:
 | `openenv push --registry ghcr.io/ORG` | Push to GitHub Container Registry |
 
 > [!TIP]
-> For a hands-on tutorial that builds a complete environment step-by-step, see [Building & Sharing Environments](plot_03_building_environments) in the Getting Started series.
+> For a hands-on tutorial that builds a complete environment step-by-step, see [Building Environments](../tutorials/index) in the Getting Started series.
 
 ---
 
