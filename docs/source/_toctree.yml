@@ -57,6 +57,18 @@
   sections:
   - local: environments
     title: Environments
+  - local: environments/echo
+    title: Echo
+  - local: environments/coding
+    title: Coding
+  - local: environments/jupyter
+    title: Jupyter
+  - local: environments/terminus
+    title: Terminus
+  - local: environments/coding_tools
+    title: Coding Tools
+  - local: environments/chat
+    title: Chat
   - local: environments/atari
     title: Atari
   - local: environments/openspiel
